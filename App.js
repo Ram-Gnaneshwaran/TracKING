@@ -22,8 +22,8 @@ export default function App() {
         {/* Student Button */}
         <Pressable onPress={(console.log("Student"))}>
           <StyledComponent 
-          component={Text} 
-          className="px-14 py-4 mr-8 bg-white text-xl font-semibold mt-10 " 
+          component={View} 
+          className="flex-row px-10 py-4 mr-8 bg-white mt-10 " 
           style={{
             borderWidth: 1,
             borderColor: "black",
@@ -32,10 +32,14 @@ export default function App() {
             shadowOpacity: 1,
             shadowRadius: 0,
           }}>
-          Student
+          {/* Button Text */}
+          <Text className="text-xl font-semibold mr-4" >Student</Text>
+          {/* Button Logo */}
+          <Image 
+          source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Student.png')} 
+          />
           </StyledComponent>
         </Pressable>
-
         {/* Border */}
         <StyledComponent 
           component={View} 
@@ -63,10 +67,11 @@ export default function App() {
           </StyledComponent>
 
         {/* Driver Button */}
-        <Pressable onPress={(console.log("Driver"))}>
+        {/* Student Button */}
+        <Pressable onPress={(console.log("Student"))}>
           <StyledComponent 
-          component={Text} 
-          className="px-14 py-4 ml-8 bg-white text-xl font-semibold mt-10 " 
+          component={View} 
+          className="flex-row px-10 py-4 ml-8 bg-white mt-10 " 
           style={{
             borderWidth: 1,
             borderColor: "black",
@@ -75,7 +80,12 @@ export default function App() {
             shadowOpacity: 1,
             shadowRadius: 0,
           }}>
-          Driver
+          {/* Button Text */}
+          <Text className="text-xl font-semibold mr-4" >Driver</Text>
+          {/* Button Logo */}
+          <Image 
+          source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Bus.png')} 
+          />
           </StyledComponent>
         </Pressable>
       </StyledComponent>
