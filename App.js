@@ -35,7 +35,7 @@ export default function App() {
     <Text > Your </Text>
     <Text className=" text-green-500 font-bold">Location</Text>
     <Text > is being </Text>
-    <Text className=" font-bold"> TracKed!</Text>
+    <Text className=" font-bold"> Tracked!</Text>
 </StyledComponent>
 
 {/* Captions*/}
