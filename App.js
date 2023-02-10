@@ -5,46 +5,48 @@ import AnimatedLottieView from 'lottie-react-native';
 
 export default function App() {
   return (
-    <SafeAreaView className = "flex-1 items-center justify-start bg-white">
 
-      {/* Logo */}
-      <Image 
-        className = "mt-10"
-        source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Logo.png')} 
-        />
+<SafeAreaView className = "flex-1 items-center justify-start bg-white">
 
-      <StatusBar style="auto" />
+{/* Logo */}
+<Image 
+  className = "mt-10"
+  source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Logo.png')} 
+  />
 
-      {/* Lottie Component */}
-      <StyledComponent 
-        component={View} 
-        className="flex items-center justify-start mt-24" >
-          <AnimatedLottieView 
-            source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/driver.json')}
-            style={{width: '60%', aspectRatio: 1}}
-            autoPlay
-            loop
-            />
-      </StyledComponent>
+<StatusBar style="auto" />
 
-      {/* Stylised Text */}
-      <StyledComponent 
-        component={Text} 
-        className="flex items-center justify-start text-xl" >
-          <Text > Your </Text>
-          <Text className=" text-green-500 font-bold">Location</Text>
-          <Text > is being </Text>
-          <Text className=" font-bold"> TracKed!</Text>
-      </StyledComponent>
+{/* Lottie Component */}
+<StyledComponent 
+  component={View} 
+  className="flex items-center justify-start mt-24" >
+    <AnimatedLottieView 
+      source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/driver.json')}
+      style={{width: '60%', aspectRatio: 1}}
+      autoPlay
+      loop
+      />
+</StyledComponent>
 
-      {/* Captions*/}
-      <StyledComponent 
-        component={Text} 
-        className="text-gray-500 mt-4" >
-          <Text > Students can now find you in their app! </Text>
-      </StyledComponent>
+{/* Stylised Text */}
+<StyledComponent 
+  component={Text} 
+  className="flex items-center justify-start text-xl" >
+    <Text > Your </Text>
+    <Text className=" text-green-500 font-bold">Location</Text>
+    <Text > is being </Text>
+    <Text className=" font-bold"> TracKed!</Text>
+</StyledComponent>
 
-    </SafeAreaView>
+{/* Captions*/}
+<StyledComponent 
+  component={Text} 
+  className="text-gray-500 mt-4" >
+    <Text > Students can now find you in their app! </Text>
+</StyledComponent>
+
+</SafeAreaView>
+
   );
 }
 
@@ -53,7 +55,7 @@ export default function App() {
 // <SafeAreaView className = "flex-1 items-center justify-start bg-white">
 // {/* Logo */}
 // <Image 
-// className = "mt-10"
+// className = "mt-36"
 // source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Logo.png')} 
 // />
 // <StatusBar style="auto" />
