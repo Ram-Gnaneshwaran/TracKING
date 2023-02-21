@@ -13,7 +13,7 @@ export default function StudentScreen1() {
         />
         <StatusBar style="auto" />
         {/* Destination Button */}
-        <Pressable onPress={(console.log("Student"))}>
+        <Pressable onPress={() => {}}>
         <StyledComponent 
             component={View} 
             className="flex-row px-6 py-2 bg-black mt-10 " 
@@ -43,7 +43,7 @@ export default function StudentScreen1() {
         </StyledComponent>
 
         {/* Find Shuttle Button */}
-        <Pressable onPress={(console.log("Student"))}>
+        <Pressable onPress={() => {}}>
         <StyledComponent 
             component={View} 
             className="flex-row px-10 py-4 ml-8 bg-white mt-10 " 

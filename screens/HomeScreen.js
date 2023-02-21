@@ -3,7 +3,7 @@ import { StyledComponent } from "nativewind";
 import AnimatedLottieView from 'lottie-react-native';
 import { StatusBar } from 'expo-status-bar';
 
-export default function  HomeScreen() {
+export default function  HomeScreen({navigation}) {
   return (
         <SafeAreaView className = "flex-1 items-center justify-start bg-white">
         {/* Logo */}
@@ -21,7 +21,7 @@ export default function  HomeScreen() {
         className=" flex-row mt-10 " >
 
         {/* Student Button */}
-        <Pressable onPress={(console.log("Student"))}>
+        <Pressable onPress={() => navigation.navigate('Student1')}>
             <StyledComponent 
             component={View} 
             className="flex-row px-10 py-4 mr-8 bg-white mt-10 " 
@@ -69,7 +69,7 @@ export default function  HomeScreen() {
             </StyledComponent>
 
         {/* Driver Button */}
-        <Pressable onPress={(console.log("Student"))}>
+        <Pressable onPress={() => navigation.navigate('Driver')}>
             <StyledComponent 
             component={View} 
             className="flex-row px-10 py-4 ml-8 bg-white mt-10 " 
