@@ -9,14 +9,19 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
+    // React Navigation
     <NavigationContainer>
+
+      {/* React Stack Navigator */}
         <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{title: 'Welcome'}}
-          />
+
+          {/* Home Screen */}
+        <Stack.Screen name="Home" component={HomeScreen}/>
+
+        {/* Student Screen 1 */}
         <Stack.Screen name="Student1" component={StudentScreen1} />
+
+        {/* Driver Screen */}
         <Stack.Screen name="Driver" component={DriverScreen} />
       </Stack.Navigator>
     </NavigationContainer>
