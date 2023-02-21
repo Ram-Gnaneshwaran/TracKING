@@ -27,7 +27,8 @@ export default function StudentHome() {
         className = "mt-10"
         source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Logo.png')} 
         />
-        <Text>Email: {auth.currentUser?.email}</Text>
+        {/* User Details */}
+        {/* <Text className="font-semibold text-lg"> Email: {auth.currentUser?.email}</Text> */}
         <StatusBar style="auto" />
         {/* Destination Button */}
         <Pressable onPress={() => {}}>
