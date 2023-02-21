@@ -30,7 +30,7 @@ export default function App() {
        <Stack.Screen name="DriverLogin" options = {{headerShown : false }} component={DriverLogin} />
 
         {/* Driver Screen */}
-        <Stack.Screen name="Driver" component={DriverScreen} />
+        <Stack.Screen name="Driver" options = {{headerShown : false }} component={DriverScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>

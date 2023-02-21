@@ -2,8 +2,23 @@ import { Image, Text, SafeAreaView, Pressable, View} from 'react-native';
 import { StyledComponent } from "nativewind";
 import AnimatedLottieView from 'lottie-react-native';
 import { StatusBar } from 'expo-status-bar';
+import { auth } from '../firebaseConfig';
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function DriverScreen() {
+    const navigation = useNavigation()
+
+    //Firebase SignOut
+    const handleSignOut = () => {
+        auth
+        .signOut()
+        .then(() => {
+            navigation.replace("Home")
+            console.log("Signed Out!")
+        })
+        .catch(error => alert(error.message))
+    }
   return (
         <SafeAreaView className = "flex-1 items-center justify-start bg-white">
 
@@ -43,6 +58,29 @@ export default function DriverScreen() {
         className="text-gray-500 mt-4" >
             <Text > Students can now find you in their app! </Text>
         </StyledComponent>
+
+       {/* Sign Out Button */}
+       <Pressable onPress={handleSignOut}>
+        <StyledComponent 
+            component={View} 
+            className="flex-row px-10 py-4 ml-8 bg-black mt-10 " 
+            style={{
+                borderWidth: 1,
+                borderColor: "white",
+                borderRadius: 4,    
+                shadowColor: '#707070',
+                shadowOffset: {width: -5, height: 5},
+                shadowOpacity: 1,
+                shadowRadius: 0,
+            }}>
+            {/* Button Text */}
+            <Text className="text-xl font-semibold mr-4 text-white" >Sign Out</Text>
+            {/* Button Logo */}
+            <Image 
+            source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Login_Icon.png')} 
+            />
+            </StyledComponent>
+        </Pressable>
 
         </SafeAreaView>
   )
