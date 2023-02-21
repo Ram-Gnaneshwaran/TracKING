@@ -21,7 +21,7 @@ export default function App() {
         <Stack.Screen name="Home" options = {{headerShown : false }} component={HomeScreen}/>
 
         {/* Student Screen 1 */}
-        <Stack.Screen name="StudentHome" component={StudentHome} />
+        <Stack.Screen name="StudentHome" options = {{headerShown : false }} component={StudentHome} />
 
        {/* Student Login*/}
        <Stack.Screen name="StudentLogin" options = {{headerShown : false }} component={StudentLogin} />
