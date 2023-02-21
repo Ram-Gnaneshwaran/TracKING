@@ -1,12 +1,56 @@
 import { Image, KeyboardAvoidingView, Text, TextInput, View, Pressable} from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StyledComponent } from 'nativewind'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
+import { auth } from '../firebaseConfig';
+import { useNavigation } from '@react-navigation/native';
 
 
 const StudentLogin = () => {
+    // States for Email & Password
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    //Initialise Navigation
+    const navigation = useNavigation()
+
+
+    useEffect(() => {
+        const unsubscribe = auth
+            .onAuthStateChanged(user => {
+            if (user) {
+                navigation.navigate("StudentHome")
+            }
+        })
+        return unsubscribe
+    }, [])
+
+    //Firebase Signup 
+    const handleSignUp = () => {
+        auth 
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            console.log("Registered with : ",user.email)
+        })
+        .catch((error) => alert(error.message));
+    }
+
+    //Firebase Login
+    const handleLogin = () => {
+        auth
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            console.log("Logged in with : ",user.email)
+            // ...
+        })
+        .catch((error) => alert(error.message));
+
+    }
 
   return (
     // Keyboard Avoid View
@@ -65,7 +109,7 @@ const StudentLogin = () => {
                 />          
 
             {/* Login Button */}
-            <Pressable onPress={() => console.log(email + password)}>
+            <Pressable onPress={handleLogin}>
                 <StyledComponent 
                 component={View} 
                 className="flex-row px-10 py-4 bg-black mt-10 " 
@@ -88,7 +132,7 @@ const StudentLogin = () => {
             </Pressable>
 
             {/* Register Button */}
-            <Pressable onPress={() => console.log(email + password)}>
+            <Pressable onPress={handleSignUp}>
                 <StyledComponent 
                 component={View} 
                 className="flex-row px-5 py-4 bg-white mt-10 " 
