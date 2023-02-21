@@ -21,7 +21,7 @@ export default function  HomeScreen({navigation}) {
         className=" flex-row mt-10 " >
 
         {/* Student Button */}
-        <Pressable onPress={() => navigation.navigate('Student1')}>
+        <Pressable onPress={() => navigation.navigate('StudentLogin')}>
             <StyledComponent 
             component={View} 
             className="flex-row px-10 py-4 mr-8 bg-white mt-10 " 
@@ -42,6 +42,7 @@ export default function  HomeScreen({navigation}) {
             />
             </StyledComponent>
         </Pressable>
+        
         {/* Border */}
         <StyledComponent 
             component={View} 
@@ -69,7 +70,7 @@ export default function  HomeScreen({navigation}) {
             </StyledComponent>
 
         {/* Driver Button */}
-        <Pressable onPress={() => navigation.navigate('Driver')}>
+        <Pressable onPress={() => navigation.navigate('DriverLogin')}>
             <StyledComponent 
             component={View} 
             className="flex-row px-10 py-4 ml-8 bg-white mt-10 " 

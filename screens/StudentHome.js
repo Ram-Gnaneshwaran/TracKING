@@ -3,7 +3,7 @@ import { StyledComponent } from "nativewind";
 import AnimatedLottieView from 'lottie-react-native';
 import { StatusBar } from 'expo-status-bar';
 
-export default function StudentScreen1() {
+export default function StudentHome() {
   return (
         <SafeAreaView className = "flex-1 items-center justify-start bg-white">
         {/* Logo */}
