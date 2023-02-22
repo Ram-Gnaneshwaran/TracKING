@@ -6,7 +6,7 @@ import { auth } from '../firebaseConfig';
 import { useNavigation } from '@react-navigation/native';
 
 
-export default function DriverScreen() {
+export default function DriverHome() {
     const navigation = useNavigation()
 
     //Firebase SignOut

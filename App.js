@@ -1,6 +1,6 @@
 import HomeScreen from './screens/HomeScreen';
 import StudentHome from './screens/StudentHome';
-import DriverScreen from './screens/DriverScreen';
+import DriverHome from './screens/DriverHome';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import StudentLogin from './screens/StudentLogin';
@@ -30,7 +30,7 @@ export default function App() {
        <Stack.Screen name="DriverLogin" options = {{headerShown : false }} component={DriverLogin} />
 
         {/* Driver Screen */}
-        <Stack.Screen name="Driver" options = {{headerShown : false }} component={DriverScreen} />
+        <Stack.Screen name="DriverHome" options = {{headerShown : false }} component={DriverHome} />
 
       </Stack.Navigator>
     </NavigationContainer>

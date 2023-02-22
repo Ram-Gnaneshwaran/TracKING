@@ -20,7 +20,7 @@ const DriverLogin = () => {
       const unsubscribe = auth
           .onAuthStateChanged(user => {
           if (user) {
-              navigation.navigate("Driver")
+              navigation.navigate("DriverHome")
           }
       })
       return unsubscribe
