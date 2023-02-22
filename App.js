@@ -20,16 +20,17 @@ export default function App() {
           {/* Home Screen */}
         <Stack.Screen name="Home" options = {{headerShown : false }} component={HomeScreen}/>
 
-        {/* Student Screen 1 */}
-        <Stack.Screen name="StudentHome" options = {{headerShown : false }} component={StudentHome} />
-
        {/* Student Login*/}
        <Stack.Screen name="StudentLogin" options = {{headerShown : false }} component={StudentLogin} />
+
+        {/* Student Home*/}
+        <Stack.Screen name="StudentHome" options = {{headerShown : false }} component={StudentHome} />
+
 
        {/* Driver Login */}
        <Stack.Screen name="DriverLogin" options = {{headerShown : false }} component={DriverLogin} />
 
-        {/* Driver Screen */}
+        {/* Driver Home */}
         <Stack.Screen name="DriverHome" options = {{headerShown : false }} component={DriverHome} />
 
       </Stack.Navigator>
