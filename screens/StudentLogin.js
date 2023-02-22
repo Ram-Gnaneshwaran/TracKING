@@ -1,4 +1,4 @@
-import { Image, KeyboardAvoidingView, Text, TextInput, View, Pressable} from 'react-native'
+import { Image, KeyboardAvoidingView, Text, TextInput, View, Pressable, ScrollView} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StyledComponent } from 'nativewind'
@@ -54,10 +54,11 @@ const StudentLogin = () => {
 
   return (
     // Keyboard Avoid View
-    <KeyboardAvoidingView>
+    <ScrollView >
+        <KeyboardAvoidingView>
 
     {/* Safe Area View */}
-      <SafeAreaView className = "flex items-center bg-white h-screen" >
+    <SafeAreaView className = "flex items-center bg-white h-screen" >
         {/* Logo */}
         <Image 
             className = "mt-10"
@@ -95,7 +96,7 @@ const StudentLogin = () => {
                 />
 
             {/* Password Input  */}
-             <TextInput 
+            <TextInput 
                 className ="mt-10 bg-white w-52 h-10 px-5 "
                 style = {{
                     borderWidth: 2,
@@ -153,10 +154,12 @@ const StudentLogin = () => {
                     />
                 </StyledComponent>
             </Pressable>
-  
+
         </StyledComponent>
-      </SafeAreaView>
-    </KeyboardAvoidingView>
+    </SafeAreaView>
+        </KeyboardAvoidingView>
+    </ScrollView>
+
   )
 }
 
