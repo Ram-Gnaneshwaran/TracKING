@@ -1,4 +1,4 @@
-import { Image, KeyboardAvoidingView, Text, TextInput, View, Pressable, ScrollView} from 'react-native'
+import { Image, KeyboardAvoidingView, Text, TextInput, View, Pressable, ScrollView, TouchableOpacity} from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StyledComponent } from 'nativewind'
@@ -110,7 +110,7 @@ const StudentLogin = () => {
                 />          
 
             {/* Login Button */}
-            <Pressable onPress={handleLogin}>
+            <TouchableOpacity onPress={handleLogin}>
                 <StyledComponent 
                 component={View} 
                 className="flex-row px-10 py-4 bg-black mt-10 " 
@@ -130,10 +130,10 @@ const StudentLogin = () => {
                     source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Login_Icon.png')} 
                     />
                 </StyledComponent>
-            </Pressable>
+            </TouchableOpacity>
 
             {/* Register Button */}
-            <Pressable onPress={handleSignUp}>
+            <TouchableOpacity onPress={handleSignUp}>
                 <StyledComponent 
                 component={View} 
                 className="flex-row px-5 py-4 bg-white mt-10 " 
@@ -153,7 +153,7 @@ const StudentLogin = () => {
                     source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Register_Icon.png')} 
                     />
                 </StyledComponent>
-            </Pressable>
+            </TouchableOpacity>
 
         </StyledComponent>
     </SafeAreaView>

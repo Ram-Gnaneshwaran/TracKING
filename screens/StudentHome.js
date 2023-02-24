@@ -1,4 +1,4 @@
-import { Image, Text, SafeAreaView, Pressable, View} from 'react-native';
+import { Image, Text, SafeAreaView, Pressable, View, TouchableOpacity} from 'react-native';
 import { StyledComponent } from "nativewind";
 import AnimatedLottieView from 'lottie-react-native';
 import { StatusBar } from 'expo-status-bar';
@@ -104,7 +104,7 @@ export default function StudentHome() {
         </Pressable>
 
         {/* Sign Out Button */}
-        <Pressable onPress={handleSignOut}>
+        <TouchableOpacity onPress={handleSignOut}>
         <StyledComponent 
             component={View} 
             className="flex-row px-10 py-4 ml-4 bg-black mt-10 " 
@@ -124,7 +124,7 @@ export default function StudentHome() {
             source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Login_Icon.png')} 
             />
             </StyledComponent>
-        </Pressable>
+        </TouchableOpacity>
         </SafeAreaView>
   )
 };

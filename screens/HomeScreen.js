@@ -1,4 +1,4 @@
-import { Image, Text, SafeAreaView, Pressable, View} from 'react-native';
+import { Image, Text, SafeAreaView, Pressable, View, TouchableOpacity} from 'react-native';
 import { StyledComponent } from "nativewind";
 import AnimatedLottieView from 'lottie-react-native';
 import { StatusBar } from 'expo-status-bar';
@@ -21,7 +21,7 @@ export default function  HomeScreen({navigation}) {
         className=" flex-row mt-10 " >
 
         {/* Student Button */}
-        <Pressable onPress={() => navigation.navigate('StudentLogin')}>
+        <TouchableOpacity onPress={() => navigation.navigate('StudentLogin')}>
             <StyledComponent 
             component={View} 
             className="flex-row px-10 py-4 mr-8 bg-white mt-10 " 
@@ -41,7 +41,7 @@ export default function  HomeScreen({navigation}) {
             source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Student.png')} 
             />
             </StyledComponent>
-        </Pressable>
+        </TouchableOpacity>
         
         {/* Border */}
         <StyledComponent 
@@ -70,7 +70,7 @@ export default function  HomeScreen({navigation}) {
             </StyledComponent>
 
         {/* Driver Button */}
-        <Pressable onPress={() => navigation.navigate('DriverLogin')}>
+        <TouchableOpacity onPress={() => navigation.navigate('DriverLogin')}>
             <StyledComponent 
             component={View} 
             className="flex-row px-10 py-4 ml-8 bg-white mt-10 " 
@@ -90,7 +90,7 @@ export default function  HomeScreen({navigation}) {
             source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Bus.png')} 
             />
             </StyledComponent>
-        </Pressable>
+        </TouchableOpacity>
         </StyledComponent>
         </SafeAreaView>
   )
