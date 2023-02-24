@@ -48,7 +48,8 @@ export default function StudentHome() {
         />
 
         {/* Destination Button */}
-        <SelectList setSelected={(val) => setSelected(val)} 
+        <SelectList 
+            setSelected={(val) => setSelected(val)} 
             data={data} 
             save="value"
             boxStyles={{
@@ -60,7 +61,13 @@ export default function StudentHome() {
                 shadowOffset: {width: -5, height: 5},
                 shadowOpacity: 1,
                 shadowRadius: 0,
-                marginTop: 30,}}/>
+                marginTop: 30,
+                minWidth: 100,
+                }}
+            dropdownStyles ={ {
+                minHeight: 100,
+            }}
+                />
         {/* Lottie Component */}
         <StyledComponent 
         component={View} 
