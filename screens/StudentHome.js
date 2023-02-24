@@ -77,7 +77,7 @@ export default function StudentHome() {
         <Pressable onPress={() => {}}>
         <StyledComponent 
             component={View} 
-            className="flex-row px-10 py-4 ml-8 bg-white mt-10 " 
+            className="flex-row px-10 py-4 ml-4 bg-white mt-10 " 
             style={{
                 borderWidth: 1,
                 borderColor: "black",
@@ -100,7 +100,7 @@ export default function StudentHome() {
         <Pressable onPress={handleSignOut}>
         <StyledComponent 
             component={View} 
-            className="flex-row px-10 py-4 ml-8 bg-black mt-10 " 
+            className="flex-row px-10 py-4 ml-4 bg-black mt-10 " 
             style={{
                 borderWidth: 1,
                 borderColor: "white",
