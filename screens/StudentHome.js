@@ -40,6 +40,7 @@ export default function StudentHome() {
     }
 
   return (
+        
         <SafeAreaView className = "flex-1 items-center justify-start bg-white">
         {/* Logo */}
         <Image 
@@ -52,6 +53,7 @@ export default function StudentHome() {
             setSelected={(val) => setSelected(val)} 
             data={data} 
             save="value"
+            placeholder='Select Destination'
             boxStyles={{
                 backgroundColor: "white",
                 borderWidth: 1,
@@ -62,11 +64,8 @@ export default function StudentHome() {
                 shadowOpacity: 1,
                 shadowRadius: 0,
                 marginTop: 30,
-                minWidth: 100,
+                width: 200,
                 }}
-            dropdownStyles ={ {
-                minHeight: 100,
-            }}
                 />
         {/* Lottie Component */}
         <StyledComponent 
