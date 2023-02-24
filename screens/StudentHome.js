@@ -5,14 +5,28 @@ import { StatusBar } from 'expo-status-bar';
 import { auth } from '../firebaseConfig';
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
+import { SelectList } from 'react-native-dropdown-select-list'
+import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
+
 
 export default function StudentHome() {
 
+    //Navigation 
     const navigation = useNavigation()
 
-    const [destination, setDestination] = useState('')
+    //Destination
+    const [selected, setSelected] = useState("");
 
-    
+    //Destination Data
+    const data = [
+        {key:'1', value:'SJT'},
+        {key:'2', value:'Main Block'},
+        {key:'3', value:'Men Hostel'},
+        {key:'4', value:'Women Hostel'},
+        {key:'5', value:'TT'},
+        {key:'6', value:'SMV'},
+        {key:'6', value:'MGB'},
+    ]
 
     //Firebase SignOut
     const handleSignOut = () => {
@@ -32,27 +46,21 @@ export default function StudentHome() {
         className = "mt-10"
         source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Logo.png')} 
         />
-        {/* User Details */}
-        {/* <Text className="font-semibold text-lg"> Email: {auth.currentUser?.email}</Text> */}
-        <StatusBar style="auto" />
+
         {/* Destination Button */}
-        <Pressable onPress={() => {}}>
-        <StyledComponent 
-            component={View} 
-            className="flex-row px-6 py-2 bg-black mt-10 " 
-            style={{
+        <SelectList setSelected={(val) => setSelected(val)} 
+            data={data} 
+            save="value"
+            boxStyles={{
+                backgroundColor: "white",
                 borderWidth: 1,
-                borderColor: "white",
-                borderRadius: 4,
-                shadowColor: '#707070',
+                borderColor: "black",
+                borderRadius: 4,    
+                shadowColor: '#171717',
                 shadowOffset: {width: -5, height: 5},
                 shadowOpacity: 1,
                 shadowRadius: 0,
-            }}>
-            {/* Button Text */}
-            <Text className="text-lg font-semibold text-white mr-4" >Destination</Text>
-            </StyledComponent>
-        </Pressable>
+                marginTop: 30,}}/>
         {/* Lottie Component */}
         <StyledComponent 
         component={View} 
