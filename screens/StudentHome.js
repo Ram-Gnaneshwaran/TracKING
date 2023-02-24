@@ -4,10 +4,15 @@ import AnimatedLottieView from 'lottie-react-native';
 import { StatusBar } from 'expo-status-bar';
 import { auth } from '../firebaseConfig';
 import { useNavigation } from '@react-navigation/native';
+import { useState } from 'react';
 
 export default function StudentHome() {
 
     const navigation = useNavigation()
+
+    const [destination, setDestination] = useState('')
+
+    
 
     //Firebase SignOut
     const handleSignOut = () => {
