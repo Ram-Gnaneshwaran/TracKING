@@ -3,6 +3,7 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { StyledComponent } from 'nativewind';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 
 
@@ -26,6 +27,25 @@ const StudentMap = (props) => {
 
     {/* Destination Text */}
     <Text className="text-2xl font-bold mt-5">{selected}</Text>
+
+    {/* Map */}
+
+    <MapView 
+      className= "my-5"
+      initialRegion={{
+        latitude: 37.78825,
+        longitude: -122.4324,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+      }}
+      provider= {PROVIDER_GOOGLE}
+      style= {{
+        width: '90%',
+        height: '50%',
+        borderRadius: 10,
+        borderWidth: 1,
+      }}
+    />
 
 
     {/* Go Back Button */}
