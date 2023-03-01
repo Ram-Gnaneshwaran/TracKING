@@ -1,11 +1,14 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, Route } from '@react-navigation/native';
 
 
 
-const StudentMap = ({route}) => {
+const StudentMap = () => {
+
+  const navigatge = useNavigation();
+  const route = Route();
 
     const { selected } = route.paramKey;
   return (
