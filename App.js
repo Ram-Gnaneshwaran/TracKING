@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import StudentLogin from './screens/StudentLogin';
 import DriverLogin from './screens/DriverLogin';
+import StudentMap from './screens/StudentMap';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +27,9 @@ export default function App() {
         {/* Student Home*/}
         <Stack.Screen name="StudentHome" options = {{headerShown : false }} component={StudentHome} />
 
-
+        {/* Student Map*/}
+        <Stack.Screen name="StudentMap" options = {{headerShown : false }} component={StudentMap} />
+        
        {/* Driver Login */}
        <Stack.Screen name="DriverLogin" options = {{headerShown : false }} component={DriverLogin} />
 

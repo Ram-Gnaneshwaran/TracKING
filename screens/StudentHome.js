@@ -39,6 +39,11 @@ export default function StudentHome() {
         .catch(error => alert(error.message))
     }
 
+    //Navigation
+    const handleFindShuttle = () =>{
+        navigation.navigate("StudentMap");
+    }
+
   return (
         
         <SafeAreaView className = "flex-1 items-center justify-start bg-white">
@@ -80,7 +85,7 @@ export default function StudentHome() {
         </StyledComponent>
 
         {/* Find Shuttle Button */}
-        <Pressable onPress={() => {}}>
+        <TouchableOpacity onPress={() => {}}>
         <StyledComponent 
             component={View} 
             className="flex-row px-10 py-4 ml-4 bg-white mt-10 " 
@@ -100,7 +105,7 @@ export default function StudentHome() {
             source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Bus.png')} 
             />
             </StyledComponent>
-        </Pressable>
+        </TouchableOpacity>
 
         {/* Sign Out Button */}
         <TouchableOpacity onPress={handleSignOut}>
