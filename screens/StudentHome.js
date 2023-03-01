@@ -85,7 +85,7 @@ export default function StudentHome() {
         </StyledComponent>
 
         {/* Find Shuttle Button */}
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={handleFindShuttle}>
         <StyledComponent 
             component={View} 
             className="flex-row px-10 py-4 ml-4 bg-white mt-10 " 
