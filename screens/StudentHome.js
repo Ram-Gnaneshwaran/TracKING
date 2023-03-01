@@ -41,7 +41,9 @@ export default function StudentHome() {
 
     //Navigation
     const handleFindShuttle = () =>{
-        navigation.navigate("StudentMap");
+        navigation.navigate("StudentMap", {
+            paramKey: selected,
+          });
     }
 
   return (
