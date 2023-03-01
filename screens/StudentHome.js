@@ -25,7 +25,7 @@ export default function StudentHome() {
         {key:'4', value:'Women Hostel'},
         {key:'5', value:'TT'},
         {key:'6', value:'SMV'},
-        {key:'6', value:'MGB'},
+        {key:'7', value:'MGB'},
     ]
 
     //Firebase SignOut
@@ -59,6 +59,7 @@ export default function StudentHome() {
         <SelectList 
             setSelected={(val) => setSelected(val)} 
             data={data} 
+            defaultOption={{key:'1', value:'SJT'}}
             save="value"
             placeholder='Select Destination'
             boxStyles={{
