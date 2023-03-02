@@ -33,11 +33,11 @@ const StudentMap = (props) => {
     <MapView 
       className= "my-5"
       initialRegion={{
-        latitude: 12.91636644200646,
-        longitude: 79.12760962388901,
+        latitude: 12.97090119409548, 
+        longitude: 79.15971497395827,
         latitudeDelta: 0.0922,
         longitudeDelta: 0.0421,
-      }}
+      }} 
       provider= {PROVIDER_GOOGLE}
       showsUserLocation= {true}
       style= {{

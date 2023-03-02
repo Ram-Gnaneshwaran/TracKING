@@ -11,7 +11,6 @@ export default function  HomeScreen({navigation}) {
         className = "mt-36"
         source={require('/Users/gnaneshwaran/Documents/GitProjects/TracKing/my-app/assets/Logo.png')} 
         />
-        <StatusBar style="auto" />
         {/* Text */}
         <Text className = "text-4xl font-semibold mt-10 ">Who are you ?</Text>
 
